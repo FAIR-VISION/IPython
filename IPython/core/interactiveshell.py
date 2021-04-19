@@ -855,9 +855,9 @@ class InteractiveShell(SingletonConfigurable):
         # during initialization of the deprecated API.
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
-            io.stdout = io.IOStream(sys.stdout)
-            io.stderr = io.IOStream(sys.stderr)
-
+            # io.stdout = io.IOStream(sys.stdout)
+            # io.stderr = io.IOStream(sys.stderr)
+            pass
     def init_prompts(self):
         # Set system prompts, so that scripts can decide if they are running
         # interactively.

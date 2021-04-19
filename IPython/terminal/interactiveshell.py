@@ -541,9 +541,9 @@ class TerminalInteractiveShell(InteractiveShell):
         # during initialization of the deprecated API.
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
-            # io.stdout = io.IOStream(sys.stdout)
-            # io.stderr = io.IOStream(sys.stderr)
-            pass
+            io.stdout = io.IOStream(sys.stdout)
+            io.stderr = io.IOStream(sys.stderr)
+            
 
     def init_magics(self):
         super(TerminalInteractiveShell, self).init_magics()
